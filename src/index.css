@@ -1,13 +1,161 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Open+Sans:wght@300;600;700;800&display=swap");
+@import "tailwindcss/screens";
+:root {
+
+ 
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: "Open-Sans", sans-serif !important;
+
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@layer base {
+  html,
+  body {
+    @apply font-Raleway;
+  }
+
+  h1 {
+    @apply h4 md:h1 font-bold;
+  }
+  h2 {
+    @apply h5 md:h2 font-bold;
+  }
+  h3 {
+    @apply h6 md:h3 font-semibold;
+  }
+  h4 {
+    @apply h4;
+  }
+  h5 {
+    @apply h5;
+  }
+  h6 {
+    @apply h6;
+  }
+
+  p {
+    @apply cursor-default;
+  }
+}
+
+/* typography */
+@layer components {
+  .h1 {
+    @apply cursor-default text-[52px] font-bold leading-[61px] text-[#FFFFFF];
+  }
+  .h2 {
+    @apply cursor-default text-[48px] font-bold leading-[56px];
+  }
+  .h3 {
+    @apply cursor-default  text-[36px] font-semibold leading-[42px];
+  }
+  .h4 {
+    @apply cursor-default  text-[32px] font-semibold leading-[38px];
+  }
+  .h5 {
+    @apply cursor-default  text-[28px] font-medium leading-[32px];
+  }
+  .h6 {
+    @apply cursor-default  text-[24px] font-medium leading-[28px] font-OpenSans;
+  }
+  .subtitle {
+    @apply text-[18px] font-medium leading-[21px];
+  }
+  .subtitle-bold {
+    @apply text-[18px] font-bold leading-[21px];
+  }
+  .body1 {
+    @apply text-[16px] font-medium leading-[19px];
+  }
+
+  .body2 {
+    @apply text-[14px] font-medium leading-[16px];
+  }
+
+  /****BUTTONS***/
+  .button-session {
+    @apply font-OpenSans  text-[16px] font-normal  text-[#414141] w-[90px]
+    hover:outline hover:outline-[#22BAFB] transition ease-in-out delay-75;
+  }
+  .button-bar {
+    @apply font-OpenSans text-[18px] font-normal   text-[#414141]
+    focus:text-[#22BAFB] hover:text-[#22BAFB] hover:underline  focus:underline;
+  }
+  .text-bar {
+  }
+  .button-search {
+    @apply mt-[43px] sm:mt-0 w-[98px] h-[40px]  py-[2px] px-[7px] rounded-[25px] text-[#414141] outline outline-[#22BAFB] transition-all ease-in-out delay-75
+    focus:bg-[#22BAFB] focus:text-white hover:-translate-y-1;
+  }
+
+  .icon-show-style {
+    @apply text-[#000000] text-[12px] md:text-[14px] flex flex-row gap-x-[7px] items-center;
+  }
+  .text-search {
+    @apply flex justify-center text-[16px] font-normal  font-OpenSans;
+  }
+
+  .grid__item {
+    @apply w-full;
+  }
+
+  .grid_container {
+    @apply grid h-full  grid-cols-4 gap-[15px];
+  }
+
+  .large1 {
+    @apply row-[1_/_span_2] col-[1_/_span_2];
+  }
+
+  .large2 {
+    @apply row-[4_/_span_2] col-[3_/_span_2];
+  }
+
+  .card_input {
+    @apply border border-solid border-[#3B3B3B3D] rounded-[15px] bg-[#FFFFFF]  h-[57px] w-[276px] dark:p-[15px]   dark:text-[#636363]
+    focus:ring-2 focus:ring-[#2196F3] focus:outline-none pl-[45px]  dark:pl-[45px];
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

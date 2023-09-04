@@ -21,52 +21,52 @@ function App() {
         </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
-            <label htmlFor="nombre" className="block text-gray-700 font-bold mb-2">
+            <label htmlFor="nombre" className="block text-gray-700 font-semibold mb-2">
               Primer Nombre
             </label>
             <input
               type="text"
               placeholder="Introduzca su primer nombre"
-              className={`form-input w-full ${
-                errors.first_name ? 'border-red-500' : 'border-gray-300'
+              className={`form-input w-full p-3 border border-gray-300 rounded ${
+                errors.first_name ? 'border-red-500' : ''
               }`}
               {...register('first_name', {
                 required: 'Este campo es obligatorio',
               })}
             />
             {errors.first_name && (
-              <p className="text-red-500 text-xs italic">{errors.first_name.message}</p>
+              <p className="text-red-500 text-xs mt-1">{errors.first_name.message}</p>
             )}
           </div>
 
           <div className="mb-4">
-            <label htmlFor="apellido" className="block text-gray-700 font-bold mb-2">
+            <label htmlFor="apellido" className="block text-gray-700 font-semibold mb-2">
               Primer Apellido
             </label>
             <input
               type="text"
               placeholder="Introduzca su apellido"
-              className={`form-input w-full ${
-                errors.last_name ? 'border-red-500' : 'border-gray-300'
+              className={`form-input w-full p-3 border border-gray-300 rounded ${
+                errors.last_name ? 'border-red-500' : ''
               }`}
               {...register('last_name', {
                 required: 'Este campo es obligatorio',
               })}
             />
             {errors.last_name && (
-              <p className="text-red-500 text-xs italic">{errors.last_name.message}</p>
+              <p className="text-red-500 text-xs mt-1">{errors.last_name.message}</p>
             )}
           </div>
 
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
+            <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
               Email
             </label>
             <input
               type="email"
               placeholder="Introduzca su correo"
-              className={`form-input w-full ${
-                errors.email ? 'border-red-500' : 'border-gray-300'
+              className={`form-input w-full p-3 border border-gray-300 rounded ${
+                errors.email ? 'border-red-500' : ''
               }`}
               {...register('email', {
                 required: 'Este campo es obligatorio',
@@ -75,33 +75,33 @@ function App() {
               })}
             />
             {errors.email && (
-              <p className="text-red-500 text-xs italic">{errors.email.message}</p>
+              <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
             )}
           </div>
 
           <div className="mb-4">
-            <label htmlFor="monto" className="block text-gray-700 font-bold mb-2">
+            <label htmlFor="monto" className="block text-gray-700 font-semibold mb-2">
               Monto del Préstamo
             </label>
             <input
               type="text"
               placeholder="Introduzca el monto del préstamo"
-              className={`form-input w-full ${
-                errors.loan_qty ? 'border-red-500' : 'border-gray-300'
+              className={`form-input w-full p-3 border border-gray-300 rounded ${
+                errors.loan_qty ? 'border-red-500' : ''
               }`}
               {...register('loan_qty', {
                 required: 'Este campo es obligatorio',
               })}
             />
             {errors.loan_qty && (
-              <p className="text-red-500 text-xs italic">{errors.loan_qty.message}</p>
+              <p className="text-red-500 text-xs mt-1">{errors.loan_qty.message}</p>
             )}
           </div>
 
           <div className="mb-6">
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue active:bg-blue-800 w-full"
+              className="bg-blue-500 hover:bg-blue-700  font-semibold py-2 px-4 rounded-full w-full transition duration-300 focus:outline-none focus:ring focus:ring-blue-200 active:bg-blue-800"
             >
               Solicitar Préstamo
             </button>
