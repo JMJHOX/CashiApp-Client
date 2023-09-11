@@ -33,9 +33,22 @@ module.exports = {
       warning: "#47CB54",
     },
     extend: {
+      backgroundColor: {
+        "blue-500": "rgb(59 130 246)",
+        "blue-700": "rgb(29 78 216)",
+        "blue-800": "rgb(30 64 175)",
+      },
       colors: {
-        blueLight: '#243c5a',
+        blueLight: "#243c5a",
         grayregal: "#9E9C9C",
+        "blue-200": "rgb(191 219 254)",
+        "blue-400": "rgb(96 165 250)",
+        "red-500": "rgb(239 68 68)",
+        "gray-300": "rgb(209 213 219)",
+        "gray-400": "rgb(156 163 175)",
+        "gray-700":"rgb(55 65 81)",
+        "gray-900":"rgb(17 24 39)",
+        'indigo-500':"rgb(99 102 241)"
       },
       dropShadow: {
         "3xl": "0 4px 4px rgba(0, 0, 0, 0.25)",
@@ -47,7 +60,6 @@ module.exports = {
         space: "2.6rem",
         "extra-space": "3.5rem",
       },
-
     },
   },
   plugins: [],
