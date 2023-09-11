@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cashiapp-dev-220418-authRole",
+      "UnauthRoleArn": "arn:aws:iam::229307829969:role/amplify-cashiapp-dev-220418-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::229307829969:role/amplify-cashiapp-dev-220418-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cashiapp-dev-220418-deployment",
+      "UnauthRoleName": "amplify-cashiapp-dev-220418-unauthRole",
+      "StackName": "amplify-cashiapp-dev-220418",
+      "StackId": "arn:aws:cloudformation:us-east-1:229307829969:stack/amplify-cashiapp-dev-220418/e67cc880-504f-11ee-be25-0a5b748d4e0d",
+      "AmplifyAppId": "d3c3ziathtg74j"
+    },
+    "categories": {
+      "function": {
+        "StoreProcessor": {}
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@ function FormsPage() {
     };
 
     return (
-        
+
         <div className="bg-gradient-to-r from-blue-400 to-indigo-500 min-h-screen flex justify-center items-center">
             <div className="max-w-fit w-full m-3 bg-white rounded-lg shadow-md p-6">
                 <h2 className="text-3xl font-semibold text-center mb-6 text-gray-800">
@@ -56,7 +56,23 @@ function FormsPage() {
                             <p className="text-red-500 text-xs mt-1">{errors.last_name.message}</p>
                         )}
                     </div>
-
+                    <div className="mb-4">
+                        <label htmlFor="client_identity_id" className="block text-gray-700 font-semibold mb-2">
+                            Cédula
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="X-XXX-XXXX"
+                            className={`form-input w-full p-3 border border-gray-300 rounded ${errors.client_identity_id ? 'border-red-500' : ''
+                                }`}
+                            {...register('client_identity_id', {
+                                required: 'Este campo es obligatorio'
+                            })}
+                        />
+                        {errors.client_identity_id && (
+                            <p className="text-red-500 text-xs mt-1">{errors.client_identity_id.message}</p>
+                        )}
+                    </div>
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
                             Correo electrónico
@@ -105,19 +121,13 @@ function FormsPage() {
                         {errors.contact_phone && (
                             <p className="text-red-500 text-xs mt-1">{errors.contact_phone.message}</p>
                         )}
-                        {/* {errors.contact_phone && errors.contact_phone.type === "min" && (
-              <span role="alert">Mínimo no cumplido</span>
-            )}
-            {errors.contact_phone && errors.contact_phone.type === "max" && (
-              <span role="alert">Máximo excedido</span>
-            )} */}
                     </div>
                     <div className="mb-4">
                         <label htmlFor="monto" className="block text-gray-700 font-semibold mb-2">
                             Monto del Préstamo
                         </label>
                         <input
-                            type="text"
+                            type="number"
                             placeholder="Introduzca el monto del préstamo"
                             className={`form-input w-full p-3 border border-gray-300 rounded ${errors.loan_qty ? 'border-red-500' : ''
                                 }`}
