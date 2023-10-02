@@ -5,7 +5,6 @@ import { IUserFormValues } from '../interfaces';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 
-
 function FormsPage() {
     const {
         register,
