@@ -1,4 +1,4 @@
-import { createClientPetition, getPendingRequests } from '../data';
+import { createClientPetition } from '../data';
 import { IRequest } from '../interfaces/index';
 
 import { IUserFormValues } from '../interfaces';
@@ -16,9 +16,9 @@ function FormsPage() {
         console.log(data); // Aquí puedes enviar los datos a tu servidor o realizar otras acciones
         let requests = await createClientPetition("userInfo.token").then(
             (result: IRequest[]) => {
-              return result;
+                return result;
             });
-            console.log(requests)
+        console.log(requests)
     };
 
     return (
