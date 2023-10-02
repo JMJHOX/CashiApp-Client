@@ -32,5 +32,5 @@ jobs:
       - name: Check if web bucket deployment exists
         id: deployment-stack-exists
         run: |
-          aws s3 cp /build/ s3://static-website-finance-dev/ --recursive
+          aws s3 cp /build s3://static-website-finance-dev/ --recursive
 
