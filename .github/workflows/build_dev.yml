@@ -13,10 +13,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Check if web bucket deployment exists
+      - name: Installing dependencies
         id: deployment-stack-exists
         run: |
-          npm build
+          npm run install
+          npm run build
 
       - name: Configure AWS credentials
         id: aws-credentials
