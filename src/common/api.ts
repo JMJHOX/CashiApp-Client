@@ -50,7 +50,7 @@ export default class ApiHandler {
         },
         method: apiMethod,
         body: body_params == null ? null : JSON.stringify(body_params),
-        mode: process.env.REACT_APP_STAGE === "dev" ? "no-cors" : "cors",
+        mode: "cors",
       });
       console.log(response)
       if (!response.ok) {
