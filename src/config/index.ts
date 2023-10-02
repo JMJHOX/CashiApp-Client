@@ -12,6 +12,6 @@ export const BG_ENDPOINTS = {
     "reject_request",
     "federate_console",
     "federate_cli",
-    "/finance"
+    "finance"
   ],
 };

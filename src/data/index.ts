@@ -12,7 +12,7 @@ export const getRequests = (token: string, user_params?:any) => api.get_authoriz
     "get_requests", token, ApiMethod.GET,null,[])
 
 export const createClientPetition = ( user_params?:any) => api.get_authorized_resource<IRequest[]>(
-        "/finance","", ApiMethod.GET,null,[])
+        "finance","", ApiMethod.GET,null,[])
 
 export const getPendingRequests = (token: string, user_params?:any) => api.get_authorized_resource<IRequest[]>(
     "get_pending_requests", token, ApiMethod.GET,null,[])
