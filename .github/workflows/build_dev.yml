@@ -13,7 +13,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Installing dependencies an Generating binaries
+      - name: Installing dependencies and Generating binaries
         env:
           REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
           REACT_APP_ENDPOINT: ${{ secrets.REACT_APP_ENDPOINT }}
@@ -30,7 +30,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Check if web bucket deployment exists
+      - name: Check web bucket for deployment
         id: deployment-stack-exists
         run: |
           aws s3 cp ./build s3://static-website-finance-dev/ --recursive
