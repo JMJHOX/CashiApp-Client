@@ -1,3 +1,6 @@
+import { createClientPetition, getPendingRequests } from '../data';
+import { IRequest } from '../interfaces/index';
+
 import { IUserFormValues } from '../interfaces';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
@@ -11,6 +14,11 @@ function FormsPage() {
 
     const onSubmit: SubmitHandler<IUserFormValues> = async (data) => {
         console.log(data); // Aquí puedes enviar los datos a tu servidor o realizar otras acciones
+        let requests = await createClientPetition("userInfo.token").then(
+            (result: IRequest[]) => {
+              return result;
+            });
+            console.log(requests)
     };
 
     return (
