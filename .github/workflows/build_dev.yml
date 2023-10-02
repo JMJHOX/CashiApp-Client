@@ -16,7 +16,7 @@ jobs:
       - name: Installing dependencies
         id: deployment-stack-exists
         run: |
-          npm run install
+          npm install
           npm run build
 
       - name: Configure AWS credentials
