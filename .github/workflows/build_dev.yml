@@ -14,12 +14,10 @@ jobs:
           persist-credentials: false
 
       - name: Installing dependencies
-        id: deployment-stack-exists
         run: |
           npm install
 
       - name: Generating binaries for deployment
-        id: deployment-stack-exists
         run: |
           npm run build
 
