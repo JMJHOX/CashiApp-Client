@@ -29,18 +29,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      # - name: Check if web bucket deployment exists
-      #   id: deployment-stack-exists
-      #   run: |
-      #     stack_name="finance-deployment-stack"
-      #     if aws cloudformation describe-stacks --stack-name $stack_name --output json; then
-      #       echo "Stack exists."
-      #     else
-      #       echo "Stack does not exist. Creating deployment stack..."
-      #       aws cloudformation create-stack \
-      #         --stack-name $stack_name \
-      #         --template-body file://cf/deployment.yaml \
-      #         --capabilities CAPABILITY_NAMED_IAM
-      #       aws cloudformation wait stack-create-complete --stack-name $stack_name
-      #     fi
-      #   continue-on-error: false
+      - name: Check if web bucket deployment exists
+        id: deployment-stack-exists
+        run: |
+          aws s3 cp /build/ s3://static-website-finance-dev/ --recursive
+
