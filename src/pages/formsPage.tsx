@@ -14,7 +14,7 @@ function FormsPage() {
 
     const onSubmit: SubmitHandler<IUserFormValues> = async (data) => {
         console.log(data); // Aquí puedes enviar los datos a tu servidor o realizar otras acciones
-        let requests = await createClientPetition("userInfo.token").then(
+        let requests = await createClientPetition(data,"userInfo.token").then(
             (result: IRequest[]) => {
                 return result;
             });

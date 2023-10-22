@@ -11,8 +11,8 @@ export const api = new ApiHandler(
 export const getRequests = (token: string, user_params?:any) => api.get_authorized_resource<IRequest[]>(
     "get_requests", token, ApiMethod.GET,null,[])
 
-export const createClientPetition = ( user_params?:any) => api.get_authorized_resource<IRequest[]>(
-        "finance","", ApiMethod.GET,null,[])
+export const createClientPetition = ( payload:any,user_params?:any) => api.get_authorized_resource<IRequest[]>(
+        "finance","", ApiMethod.POST,{payload: payload},[])
 
 export const getPendingRequests = (token: string, user_params?:any) => api.get_authorized_resource<IRequest[]>(
     "get_pending_requests", token, ApiMethod.GET,null,[])
